@@ -22,7 +22,6 @@ public class SuKyeong2002 {
                 // 폭발 문자열을 돌면서
                 for (int j = 0; j < bombStr.length(); j++) {
 
-                    // stack은 후입선출이기 때문에 뒤부터 폭발 문자열과 같은지 확인
                     // 같지 않을 경우 isSame을 false로 변환하고 반복문 중단
                     if (stack.get(stack.size() - bombStr.length() + j) != bombStr.charAt(j)) {
                         isSame = false;
@@ -30,8 +29,10 @@ public class SuKyeong2002 {
                     }
                 }
 
-                // 폭발 문자열과 같을 경우 제거
+                // 폭발 문자열과 같을 경우
                 if (isSame == true) {
+
+                    // 폭발 문자열의 길이만큼 돌면서 stack에서 삭제
                     for (int j = 0; j < bombStr.length(); j++) {
                         stack.pop();
                     }
@@ -40,7 +41,7 @@ public class SuKyeong2002 {
         }
 
         // stack이 비어있을 경우 "FRULA" 출력
-        // 비어있지 안은 경우 제거되고 남은 문자열만 출력 (순서 유지를 위해 StringBuilder 사용)
+        // 비어있지 앟은 경우 제거되고 남은 문자열만 출력 (순서 유지를 위해 StringBuilder 사용)
         if (stack.isEmpty()) {
             System.out.println("FRULA");
         } else {
