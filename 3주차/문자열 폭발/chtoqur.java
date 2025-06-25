@@ -6,7 +6,7 @@ public class chtoqur {
 		StringBuilder sb = new StringBuilder();
 		
 		String str = br.readLine();		// 문자열
-		String bombStr = br.readLine();	// 폭발 문자열
+		String bombStr = br.readLine();		// 폭발 문자열
 		int bombLen = bombStr.length();
 
 		for (int i = 0; i < str.length(); i++) {
