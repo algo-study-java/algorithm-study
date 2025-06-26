@@ -2,8 +2,8 @@ import java.io.*;
 import java.util.*;
 
 class Lecture {
-	int st;		// start time
-	int et;		// end time
+	int st;	      // start time
+	int et;		  // end time
 	
 	public Lecture(int st, int et) {
 		this.st = st;
