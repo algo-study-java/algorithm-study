@@ -21,12 +21,17 @@ public class SuKyeong2002 {
 
         // 각 동전에 대해
         for (int coin : coins) {
-            // 동전의 가치 계산
+            /*
+             * 동전의 가치 계산
+             * coin = 1, i = 1 ~ 10, i - coin = 0 ~ 9: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+             * coin = 2, i = 2 ~ 10, i - coin = 0 ~ 8 : [1, 2, 2, 3, 3, 4, 4, 5, 5, 6]
+             * coin = 5, i = 5 ~ 10, i - coin = 0 ~ 5 : [1, 2, 2, 3, 4, 5, 6, 7, 8, 10]
+             */
             for (int i = coin; i < k + 1; i++) {
                 dp[i] = dp[i] + dp[i - coin];
             }
         }
-        // 경우의 수 = dp 크기 출력
+        // k의 경우의 수 = dp[k] 출력
         System.out.println(dp[k]);
     }
 }
