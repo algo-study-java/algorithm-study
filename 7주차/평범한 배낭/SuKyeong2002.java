@@ -16,7 +16,7 @@ public class SuKyeong2002 {
         }
 
         // 누적합 저장 dp
-        int[] dp = new int[K + 1]; // 크기: 배낭 무게 (1 ~ K+1)
+        int[] dp = new int[K + 1]; // 크기: 배낭 무게 (1 ~ K)
 
         // 누적합 (최대 가치) 계산 -> 첫번째 반복문: 물건
         for (int i = 1; i <= N; i++) {
