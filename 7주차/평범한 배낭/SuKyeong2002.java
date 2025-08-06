@@ -6,8 +6,8 @@ public class SuKyeong2002 {
         int N = sc.nextInt(); // 물품의 수
         int K = sc.nextInt(); // 준서가 버틸 수 있는 무게
 
-        int[] W = new int[N + 1]; // 물건의 무게 저장 (1 ~ n)
-        int[] V = new int[N + 1]; // 물건의 가치 저장 (1부터 시작)
+        int[] W = new int[N + 1]; // 물건의 무게 저장 (1 ~ N)
+        int[] V = new int[N + 1]; // 물건의 가치 저장 (1 ~ N)
 
         // 각 물건의 무게(W)와 가치(V) 입력받기
         for (int i = 1; i <= N; i++) {
