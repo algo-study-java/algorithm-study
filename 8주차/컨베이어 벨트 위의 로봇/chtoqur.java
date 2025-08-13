@@ -63,7 +63,6 @@ public class chtoqur {
       if (cnt >= K)
         break;
     }
-
     System.out.println(ans);
   }
 }
