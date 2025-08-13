@@ -6,10 +6,10 @@ class Node {
   int y;
   int dis;
 
-  public Node(int x, int y, int dist) {
+  public Node(int x, int y, int dis) {
     this.x = x;
     this.y = y;
-    this.dis = dist;
+    this.dis = dis;
   }
 }
 
