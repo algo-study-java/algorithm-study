@@ -16,7 +16,7 @@ class Node {
 
 public class chtoqur {
     static int N;
-    static int[][] space;
+    static int[][] map;
     static boolean[][] visited;
     static int sharkSize = 2;
     static int eatCount = 0;
@@ -28,18 +28,18 @@ public class chtoqur {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         N = Integer.parseInt(br.readLine());
-        space = new int[N][N];
+        map = new int[N][N];
 
         int sharkX = 0, sharkY = 0;
 
         for (int i = 0; i < N; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
             for (int j = 0; j < N; j++) {
-                space[i][j] = Integer.parseInt(st.nextToken());
-                if (space[i][j] == 9) {
+                map[i][j] = Integer.parseInt(st.nextToken());
+                if (map[i][j] == 9) {
                     sharkX = i;
                     sharkY = j;
-                    space[i][j] = 0; // 상어 위치
+                    map[i][j] = 0; // 상어 위치
                 }
             }
         }
@@ -55,7 +55,7 @@ public class chtoqur {
             sharkY = target.y;
 
             // 물고기 먹기
-            space[sharkX][sharkY] = 0;
+            map[sharkX][sharkY] = 0;
             eatCount++;
             if (eatCount == sharkSize) {
                 sharkSize++;
@@ -83,7 +83,7 @@ public class chtoqur {
                 break;
 
             // 먹을 수 있는 물고기
-            if (space[cur.x][cur.y] > 0 && space[cur.x][cur.y] < sharkSize) {
+            if (map[cur.x][cur.y] > 0 && map[cur.x][cur.y] < sharkSize) {
                 fishes.add(cur);
                 minDis = cur.dis;
                 continue;
@@ -94,7 +94,7 @@ public class chtoqur {
                 int ny = cur.y + dy[d];
                 if (nx < 0 || ny < 0 || nx >= N || ny >= N)
                     continue;
-                if (!visited[nx][ny] && space[nx][ny] <= sharkSize) {
+                if (!visited[nx][ny] && map[nx][ny] <= sharkSize) {
                     visited[nx][ny] = true;
                     Q.offer(new Node(nx, ny, cur.dis + 1));
                 }
