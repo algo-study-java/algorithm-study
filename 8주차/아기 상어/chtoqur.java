@@ -67,7 +67,7 @@ public class chtoqur {
 
   static Node bfs(int sx, int sy) {
     visited = new boolean[N][N];
-    Queue<Node> q = new LinkedList<>();
+    Queue<Node> q = new ArrayDeque<>();
     q.offer(new Node(sx, sy, 0));
     visited[sx][sy] = true;
 
