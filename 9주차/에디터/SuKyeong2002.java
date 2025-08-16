@@ -105,6 +105,6 @@ public class SuKyeong2002 {
         }
 
         // 결과 문자열로 한 번에 출력
-        System.out.println(out.toString());
+
     }
 }
