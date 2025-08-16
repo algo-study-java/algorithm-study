@@ -110,6 +110,6 @@ public class chtoqur {
             return a.y - b.y;
         });
 
-        return fishes.get(0);
+        return null;
     }
 }
