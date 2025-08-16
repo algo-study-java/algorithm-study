@@ -72,6 +72,7 @@ public class SuKyeong2002 {
                 // 명령이 'B'이고 커서가 문장의 맨 앞이 아닐 경우
                 case 'B':
                     if (!left.isEmpty()) {
+                        // left의 맨 위 문자를 하나 꺼냄(=삭제)
                         left.pop();
                     }
                     break;
