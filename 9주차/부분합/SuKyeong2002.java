@@ -93,6 +93,6 @@ public class SuKyeong2002 {
          * minLength이 초기값과 같은 경우 0 출력
          * 그렇지 않을 경우 minLength 출력
          */
-
+        System.out.println(minLength == Integer.MAX_VALUE ? 0 : minLength);
     }
 }
