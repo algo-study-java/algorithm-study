@@ -53,7 +53,10 @@ public class SuKyeong2002 {
                  */
                 int currentPos = j % 2 == 0 ? 1 : 2;
 
-                // *** 이전값 받기
+                /*
+                 * *** 이전 dp값 받아야 함 !!!
+                 * 예: dp[2][0] = dp[1][0] = 0, dp[2][1] = dp[1][1] = 1
+                 */
                 dp[i][j] = dp[i - 1][j];
 
                 /*
