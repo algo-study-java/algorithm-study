@@ -94,10 +94,23 @@ public class SuKyeong2002 {
             dp[i][3] = dp[i - 3][1] + dp[i - 3][2] + dp[i - 3][3];
         }
 
-        // 결과 (각각의 테스트 케이스의 방법의 수의 합) 출력
+        /*
+         * 결과 (각각의 테스트 케이스의 방법의 수의 합) 출력
+         * StringBuilder 사용한 이유: 124ms -> 108
+         * 결론: 출력이 많은 경우 StringBuilder로 모아서 출력하는 게 좋음
+         */
+
+        /*
+         * for (int i = 0; i < testCase; i++) {
+         * System.out.println(dp[TestCaseArr[i]][1] + dp[TestCaseArr[i]][2] +
+         * dp[TestCaseArr[i]][3]);
+         * }
+         */
+
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < testCase; i++) {
-            sb.append(dp[TestCaseArr[i]][1] + dp[TestCaseArr[i]][2] + dp[TestCaseArr[i]][3]).append('\n');
+            sb.append(dp[TestCaseArr[i]][1] + dp[TestCaseArr[i]][2] +
+                    dp[TestCaseArr[i]][3]).append('\n');
         }
         System.out.println(sb);
     }
