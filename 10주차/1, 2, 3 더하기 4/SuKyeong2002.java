@@ -96,7 +96,7 @@ public class SuKyeong2002 {
 
         /*
          * 결과 (각각의 테스트 케이스의 방법의 수의 합) 출력
-         * StringBuilder 사용한 이유: 124ms -> 108
+         * StringBuilder 사용한 이유: 124ms -> 108ms
          * 결론: 출력이 많은 경우 StringBuilder로 모아서 출력하는 게 좋음
          */
 
