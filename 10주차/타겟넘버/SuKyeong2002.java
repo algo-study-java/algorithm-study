@@ -23,6 +23,6 @@ class Solution {
         // 타겟 넘버 배열값을 - 하는 경우
         int minus = dfs(numbers, target, depth + 1, sum - numbers[depth]);
 
-        return plus + minus;
+        return 1;
     }
 }
