@@ -11,7 +11,7 @@ public class chtoqur {
     N = Integer.parseInt(st.nextToken());
     int r = Integer.parseInt(st.nextToken());
     int c = Integer.parseInt(st.nextToken());
-
+    
     System.out.println(Z(N, r, c));
   }
 
@@ -33,7 +33,6 @@ public class chtoqur {
         ans += (mid * mid * 3) + Z(n - 1, r - mid, c - mid);
       }
     }
-
     return ans;
   }
 }
