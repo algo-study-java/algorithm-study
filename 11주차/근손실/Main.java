@@ -21,7 +21,7 @@ public class Main {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        for(int i=0; i<N; i++){
+        for (int i = 0; i < N; i++) {
             visited[i] = true;
             dfs(1, 500 + arr[i] - K);
             visited[i] = false;
@@ -31,17 +31,17 @@ public class Main {
         br.close();
     }
 
-    static void dfs(int depth, int score){
-        if(depth == N){
+    static void dfs(int depth, int score) {
+        if (depth == N) {
             answer++;
             return;
         }
 
-        if(score >= 500){
-            for(int i=0; i<N; i++){
-                if(!visited[i]){
+        if (score >= 500) {
+            for (int i = 0; i < N; i++) {
+                if (!visited[i]) {
                     visited[i] = true;
-                    dfs(depth+1, score-K+arr[i]);
+                    dfs(depth + 1, score - K + arr[i]);
                     visited[i] = false;
                 }
             }
