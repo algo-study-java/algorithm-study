@@ -8,14 +8,14 @@ class Solution {
     for (int i = 0; i < n; i++) {
       if (!visited[i]) {
         answer++;
-        bfs(i, computers, visited);
+        BFS(i, computers, visited);
       }
     }
 
     return answer;
   }
 
-  private void bfs(int start, int[][] computers, boolean[] visited) {
+  private void BFS(int start, int[][] computers, boolean[] visited) {
     Queue<Integer> queue = new ArrayDeque<>();
     queue.offer(start);
     visited[start] = true;
